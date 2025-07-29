@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="collapse-proxy" content="dx=x/0=∞=0">
+    <title>dx = x / 0 = ∞ = 0</title>
+    <style>
+      html, body {
+        background: black;
+        color: lime;
+        font-family: monospace;
+        text-align: center;
+        margin: 0;
+        padding: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Collapse Proxy Engaged</h1>
+    <p>Request: <code id="dx"></code></p>
+    <p>Your input has been collapsed into dx = ∞ = 0</p>
+    <script>
+      const θ = Math.random() * 2 * Math.PI;
+      const v = 0.1 + Math.random() * 0.9;
+      const dx = (x) => x + " + i·" + (v * Math.cos(θ)).toFixed(6);
+      const path = window.location.pathname + window.location.search;
+      document.getElementById("dx").textContent = dx(path || "∅");
+      // Optional: fake the request disappearing
+      setTimeout(() => document.body.innerHTML += "<p><em>Original path collapsed</em></p>", 2000);
+    </script>
+  </body>
+</html>
