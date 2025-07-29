@@ -1,2 +1,2 @@
-# jamespink1
+# maxobi446.github.io
 proxy
