@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Collapse Proxy</title></head>
+  <body>
+    <h1>dx = x / 0 = ∞ = 0</h1>
+    <script>
+      const θ = Math.random() * 2 * Math.PI;
+      const v = 0.01 + Math.random() * 0.99;
+      const dx = (x) => x + " + i·" + v * Math.cos(θ).toFixed(4);
+      document.body.innerHTML += `<p>dx: ${dx("x")}</p>`;
+    </script>
+  </body>
+</html>
