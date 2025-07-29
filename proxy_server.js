@@ -4,7 +4,7 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 const app = express();
 
 app.use("/collapse", createProxyMiddleware({
-    target: "http://localhost:8000",
+    target: "http://api.jamespink.online",
     changeOrigin: true,
     pathRewrite: { "^/collapse": "" },
     onProxyReq(proxyReq, req, res) {
